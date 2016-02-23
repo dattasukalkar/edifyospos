@@ -1,0 +1,110 @@
+@import url(autocomplete.css);
+@import url(menubar.css);
+@import url(general.css);
+@import url(popupbox.css);
+@import url(register.css);
+@import url(receipt.css);
+@import url(reports.css);
+@import url(tables.css);
+@import url(thickbox.css);
+@import url(datepicker.css);
+@import url(custom.css);
+
+#content_area_wrapper
+{
+	position: relative;
+	margin: 0px auto;
+	max-width: 1024px;
+	text-align: left;
+	background-color:#ffffff;
+}
+
+#content_area
+{
+	position:relative;
+	margin:0 auto;
+	width:100%;
+	max-width:1024px;
+	text-align:left;
+	color:#373536;	
+	padding-top:10px;
+}	
+
+#page_title
+{
+	margin-top:8px;
+	font-size:30px;
+	font-weight:bold;
+	color:#000000;
+	text-align:center;
+
+}
+
+#page_subtitle
+{
+	margin-top:8px;
+	font-size:16px;
+	font-weight:bold;
+	color:#000000;
+	text-align:center;
+}
+
+#new_button
+{
+	position:relative;
+	right:0px;
+}
+
+#spinner
+{
+        float:right;	
+	display:none;
+}
+
+#feedback_bar
+{
+	position:fixed;
+	bottom:0;
+	left:0;
+	width:100%;
+	height:55px;	
+	position:fixed;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	z-index:1;
+	line-height:3.3;
+}
+
+.module_item
+{
+	padding: 10px;
+	width:100%;
+	color:#373536;
+}
+
+#config_info .wide
+{
+	width: 30%;
+}
+
+#footer
+{
+	position:relative;
+	margin-top:25px;
+	margin-bottom:15px;	
+	text-align:center;
+	font-size:11px;
+	color:#777777;
+	clear:both;
+	
+}
+
+logotype
+{
+        position:relative;
+        margin:0 auto;
+        max-width:150px;
+        max-height:150px;
+        padding-bottom:10px;
+        padding-top:10px;
+}

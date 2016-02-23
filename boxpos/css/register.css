@@ -1,0 +1,141 @@
+#register_wrapper
+{
+	float: left;
+    margin-left: 0px;
+	margin-bottom: 5px;
+    background-color: #ebebeb;
+    vertical-align: middle;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+
+#mode_form
+{
+	position:relative;
+}
+
+#register
+{
+	width:100%;
+	padding:0px;
+	border-collapse:collapse;	
+}
+
+#register th
+{	
+	background-color:#373536;
+	padding:5px;
+	text-align:center;
+	color:#FFFFFF;
+}
+
+#register td
+{
+	background-color:#ebebeb;
+	padding:3px;
+	text-align:center;
+	color:#373536;
+}
+
+#register td a:link
+{
+	color:#ff0491;
+}
+
+#overall_sale
+{
+	float:left;
+	margin-left:0px;
+	background-color:#ebebeb;
+	vertical-align: middle;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+    	transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+
+#finish_sale
+{
+	position:relative;
+}
+
+#Cancel_sale
+{
+	float:left;
+	width:100%;
+	clear:both;
+}
+#suspended_sales_table
+{
+	width:100%;
+}
+
+#credit_card_form fieldset 
+{
+	overflow: auto;
+	border: 0;
+	margin: 0;
+	padding: 0; 
+}
+
+#credit_card_form fieldset div 
+{
+	float: left; 
+}
+
+#credit_card_form fieldset.centered div 
+{
+	text-align: center; 
+}
+
+#credit_card_form label 
+{
+	display: block;
+	margin-bottom: 5px; 
+}
+
+#credit_card_form input.text 
+{
+	border: 1px solid #bfbab4;
+	margin: 0 4px 8px 0;
+}
+
+.pos-md-4
+{
+	width:33.3333%;
+	float: left;
+	position: relative;
+	min-height: 1px;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+.pos-md-3
+{
+	width:25%;
+	float: left;
+	position: relative;
+	min-height: 1pm;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+.pos-row
+{
+	margin-right: -15px;
+	margin-left: -15px;
+	padding:0px;
+	margin:0px;
+}
+
+.posbtn_large
+{
+	min-width:100px;
+	max-width:200px;
+	min-height:100px;
+	max-height:200px;
+	vertical-align:text-middle;
+}
+

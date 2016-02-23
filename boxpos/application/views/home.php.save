@@ -1,0 +1,43 @@
+<?php $this->load->view("partial/header"); ?>
+
+<div class="page-header h1"><?php echo $this->lang->line('common_welcome_message'); ?></div>
+	<?php
+	foreach($allowed_modules->result() as $module)
+	{
+		if (sizeof(explode('_', $module->module_id)) == 1)
+		{
+	?>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+		<a href="<?php echo site_url("$module->module_id");?>">
+		
+			<?php echo $this->lang->line("module_".$module->module_id) ?>
+		
+		</a>
+		</div>
+		<div class="panel-body">
+			<div>
+				<img src="<?php echo base_url().'images/menubar/'.$module->module_id.'.png';?>" class="img-thumbnail">
+			</div>
+			<div class="small">
+				<?php echo $this->lang->line('module_'.$module->module_id.'_desc');?>
+			</div>
+		</div>
+	</div>
+
+	<?php
+			}
+		}
+		?>
+
+
+	</div>
+</div>
+
+
+
+
+
+
+
+<?php $this->load->view("partial/footer"); ?>
