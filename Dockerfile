@@ -5,24 +5,21 @@ MAINTAINER EdifyNowospos <datta.sukalkar@edifynow.com>
 RUN apt-get update && \
  DEBIAN_FRONTEND=noninteractive apt-get -y upgrade && \
  DEBIAN_FRONTEND=noninteractive apt-get -y install supervisor pwgen && \
- apt-get -y install git apache2 libapache2-mod-php5 php5-mysql php5-pgsql php5-gd php-pear php-apc curl && \
- curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin && \
- mv /usr/local/bin/composer.phar /usr/local/bin/composer
+ apt-get -y install mysql-client unzip
 
-# Override default apache conf
-ADD apache.conf /etc/apache2/sites-enabled/000-default.conf
+# Download CodeIgniter into /app
+RUN rm -fr /app && mkdir /app && \
+ curl -OL https://ellislab.com/codeigniter/download && \
+ unzip download -d /tmp  && \
+ cp -Rf /tmp/CodeIgniter_2.2.0/* /app
+ rm download
 
-# Enable apache rewrite module
-RUN a2enmod rewrite
+# Add configuration with info for Codeingiter to connect to DB
+ADD database.php /app/application/config/database.php
+RUN chmod 644 /app/application/config/database.php
 
-# Add image configuration and scripts
-ADD start.sh /start.sh
-ADD run.sh /run.sh
-RUN chmod 755 /*.sh
-ADD supervisord-apache2.conf /etc/supervisor/conf.d/supervisord-apache2.conf
-
-# Configure /app folder
-RUN mkdir -p /app && rm -fr /var/www/html && ln -s /app /var/www/html
+# Fix permissions for apache
+RUN chown -R www-data:www-data /app
 
 EXPOSE 80
 CMD ["/run.sh"]
